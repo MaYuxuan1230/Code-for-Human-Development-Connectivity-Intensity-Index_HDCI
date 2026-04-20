@@ -1,0 +1,30 @@
+# Example configuration for reservoir RFIDW
+
+paths:
+  reservoir: "path/to/reservoirs.shp"
+  china_boundary: "path/to/china_boundary.shp"
+  output_dir: "path/to/output_dir"
+  temp_dir: "path/to/terra_tmp"
+
+fields:
+  area: "Area"
+  storage: "STOR"
+
+raster:
+  resolution_m: 1000
+  tile_size_m: 200000
+
+model:
+  n_classes: 4
+  num_trees: 1200
+  alpha_min: 1.2
+  alpha_max: 3.0
+  radius_min_km: 5
+  radius_max_km: 50
+  seed: 20260315
+
+compute:
+  use_parallel: true
+  n_cores: 3
+  terra_memfrac: 0.15
+  terra_memmax_gb: 4
